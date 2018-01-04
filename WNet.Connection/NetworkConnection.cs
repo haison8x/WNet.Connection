@@ -35,7 +35,7 @@ namespace WNet.Connection
             if (connectResultCode != 0)
             {
                 var message = $"Error when connect to remote share. networkName: {networkName}."
-                    + "WNetAddConnection2: {connectResultCode}. WNetCancelConnection2: {cancelResultCode}";
+                    + $" WNetAddConnection2: {connectResultCode}. WNetCancelConnection2: {cancelResultCode}";
                 throw new Win32Exception(connectResultCode, message);
             }
         }
